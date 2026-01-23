@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>InfraBuild</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+<button id="themeToggle">🌙</button>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#values">Leadership</a>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ================= LEFT EVENT IMAGE SCROLL ================= -->
+<div class="event-scroll">
+  <div class="logo">
+    <img src="images/logo1.jpeg" alt="InfraBuild Logo">
+    <h1>  <span><b>INFRABUILD</b></span></h1>
+  </div>
+  <div class="event-track">
+    <img src="images/event1.jpg.jpeg">
+    <img src="images/event2.jpg.jpeg">
+    <img src="images/event3.jpg.jpeg">
+    <img src="images/event4.jpg.jpeg">
+    <img src="images/event5.jpg.jpeg">
+
+    <!-- duplicate for infinite loop -->
+    <img src="images/event1.jpg.jpeg">
+    <img src="images/event2.jpg.jpeg">
+    <img src="images/event3.jpg.jpeg">
+    <img src="images/event4.jpg.jpeg">
+    <img src="images/event5.jpg.jpeg">
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg-texture"></div>
+
+  <span class="badge animate-hero anim-delay-200">
+    🔥 Engineering Infrastructure That Empowers  || Infrastructure That Grows With Your Vision 🚀
+  </span>
+
+  <h1 class="animate-hero anim-delay-400">
+    Build Smarter, Grow Faster.<br>
+    <span>Infrastructure That Scales With Your Vision</span>
+  </h1>
+
+  <p class="animate-hero anim-delay-600">
+    InfraBuild designs scalable systems that learn, adapt, and grow with you. Technology Built With Purpose & Integrity.Infrastructure Designed for Real-World Impact.
+  </p>
+  <div class="hero-actions animate-hero anim-delay-800">
+    <a href="#contact" class="btn-primary">Build With Us</a>
+    <a href="#expertise" class="btn-secondary">Explore Expertise</a>
+  </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section reveal">
+  <div class="about-card">
+    <h2>About InfraBuild</h2>
+    <p>
+      InfraBuild is a technology-first startup focused on creating
+      secure, scalable, and ethical digital infrastructure.
+      We partner with businesses to design systems that grow,
+      adapt, and deliver long-term value.
+    </p>
+  </div>
+</section>
+
+
+<!-- ================= MISSION ================= -->
+<section id="mission" class="section reveal">
+  <h2>Our Mission</h2>
+
+  <div class="mission-grid">
+
+    <div class="mission-card">
+      <h3>Purpose-Driven Engineering</h3>
+      <p>
+        We build infrastructure with intent — ensuring every system
+        serves real human and business needs responsibly.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <h3>Scalable by Design</h3>
+      <p>
+        Our platforms are engineered to scale seamlessly as
+        organizations grow, adapt, and innovate.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <h3>Ethical & Secure Systems</h3>
+      <p>
+        Security, reliability, and ethics are foundational —
+        not afterthoughts — in everything we build.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- ================= WHAT WE BUILD ================= -->
+<section id="expertise" class="expertise-section">
+  <h2 class="section-title reveal">What We Build</h2>
+
+  <div class="expertise-grid">
+
+    <div class="product-card reveal" data-modal="cloud-modal" data-tilt>
+      <div class="icon">☁️</div>
+      <h3>InfraBuild Cloud</h3>
+      <p>Cloud-native AWS infrastructure & backend systems.</p>
+      <div class="hover-overlay">Secure • Scalable • Optimized</div>
+    </div>
+
+    <div class="product-card reveal" data-modal="data-modal" data-tilt>
+      <div class="icon">📊</div>
+      <h3>InfraBuild Data</h3>
+      <p>Data pipelines, analytics & warehouse platforms.</p>
+      <div class="hover-overlay">SQL • BigQuery • Insights</div>
+    </div>
+
+    <div class="product-card reveal" data-modal="ai-modal" data-tilt>
+      <div class="icon">🤖</div>
+      <h3>InfraBuild AI</h3>
+      <p>AI-powered automation & intelligent workflows.</p>
+      <div class="hover-overlay">ML • Python • Automation</div>
+    </div>
+
+    <div class="product-card reveal" data-modal="web-modal" data-tilt>
+      <div class="icon">🌐</div>
+      <h3>InfraBuild Web</h3>
+      <p>High-performance, scalable web platforms.</p>
+      <div class="hover-overlay">Fast • Reliable • Secure</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="case-studies" class="section reveal">
+  <h2 class="section-title">Case Studies</h2>
+
+  <div class="case-grid">
+
+    <div class="case-card">
+      <h3>Cloud Migration for SaaS Startup</h3>
+      <p class="case-problem">
+        Problem: Legacy infrastructure causing downtime and high costs.
+      </p>
+      <p class="case-solution">
+        Solution: Designed AWS cloud-native architecture with CI/CD.
+      </p>
+      <p class="case-impact">
+        Impact: 🚀 40% cost reduction, 99.9% uptime.
+      </p>
+    </div>
+
+    <div class="case-card">
+      <h3>Data Platform for Analytics Team</h3>
+      <p class="case-problem">
+        Problem: Disconnected data sources & slow reporting.
+      </p>
+      <p class="case-solution">
+        Solution: Built centralized data warehouse & pipelines.
+      </p>
+      <p class="case-impact">
+        Impact: 📊 Real-time insights & faster decisions.
+      </p>
+    </div>
+
+    <div class="case-card coming-soon">
+      <h3>AI Automation Platform</h3>
+      <p>Coming Soon 🚧</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= LEADERSHIP ================= -->
+<section id="values" class="section reveal">
+  <h2>Leadership</h2>
+
+  <div class="leader-grid">
+
+    <!-- FOUNDER -->
+    <div class="leader-card" data-tilt>
+      <div class="leader-left">
+        <a href="../portfolio/index.html">
+    <img src="images/ceo.jpeg" alt="Yash Pawar" class="clickable-img">
+</a>
+
+<style>
+/* Make the image responsive and interactive */
+.clickable-img {
+    width: 200px;           /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;    /* Rounded corners for style */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;        /* Indicates it's clickable */
+}
+
+.clickable-img:hover {
+    transform: scale(1.05);             /* Slight zoom effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Add shadow on hover */
+}
+</style>
+
+        <div class="leader-socials">
+          <a href="mailto:yashpawar@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/yash-pawar-aa5231317/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="leader-right">
+        <h3>Yash Pawar</h3>
+        <span>Founder & CEO</span>
+        <p>
+          Vision-driven entrepreneur leading InfraBuild with a
+          focus on ethical technology, scalable systems, and
+          long-term impact.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTO -->
+    <div class="leader-card" data-tilt>
+      <div class="leader-left">
+        <img src="images/CTO.png" alt="Yash Selokar">
+        
+        <div class="leader-socials">
+          <a href="mailto:yashselokar@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/yash-selokar-5b88a9329/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="leader-right">
+        <h3>Yash Selokar</h3>
+        <span>Co-Founder & CTO</span>
+        <p>
+          Technology architect driving InfraBuild’s cloud,
+          backend, security, and data engineering excellence.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT STRIP ================= -->
+<section class="contact-strip">
+  <div class="contact-box">
+    <h2>Let’s Build the Future Together</h2>
+    <p>Have an idea or want to work with us? We’d love to talk.</p>
+
+    <div class="contact-details">
+      <div><i class="fa-solid fa-envelope"></i> infrabuild@gmail.com</div>
+      <div><i class="fa-solid fa-location-dot"></i> Nagpur, Maharashtra, India</div>
+      <div><i class="fa-solid fa-phone"></i> +91 8500880878</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODALS ================= -->
+
+  <div class="modal-header">
+    <h2>InfraBuild Cloud ☁️</h2>
+    <button class="close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>We design and manage robust, scalable, and secure cloud infrastructure on AWS. Our solutions are optimized for performance and cost-efficiency, allowing your business to grow without limits.</p>
+    <ul>
+      <li>Serverless Architecture</li>
+      <li>Kubernetes & Containerization</li>
+      <li>CI/CD & DevOps Automation</li>
+      <li>Infrastructure as Code (IaC)</li>
+    </ul>
+
+
+<div class="modal" id="data-modal">
+  <div class="modal-header">
+    <h2>InfraBuild Data 📊</h2>
+    <button class="close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>We build end-to-end data platforms that turn raw data into actionable insights. From data warehousing to real-time analytics, we help you make data-driven decisions.</p>
+    <ul>
+      <li>ETL/ELT Data Pipelines</li>
+      <li>Data Warehousing (BigQuery, Redshift)</li>
+      <li>Business Intelligence & Visualization</li>
+      <li>Real-time Data Processing</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="ai-modal">
+  <div class="modal-header">
+    <h2>InfraBuild AI 🤖</h2>
+    <button class="close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>We integrate artificial intelligence and machine learning to automate processes and create intelligent applications. Unlock new efficiencies and capabilities with our custom AI solutions.</p>
+    <ul>
+      <li>Custom Machine Learning Models</li>
+      <li>Natural Language Processing (NLP)</li>
+      <li>Computer Vision</li>
+      <li>Predictive Analytics</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="web-modal">
+  <div class="modal-header">
+    <h2>InfraBuild Web 🌐</h2>
+    <button class="close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>We engineer high-performance, secure, and scalable web platforms that deliver exceptional user experiences. Our expertise ensures your web applications are fast, reliable, and ready for growth.</p>
+    <ul>
+      <li>Scalable Backend APIs (Node.js, Python)</li>
+      <li>Modern Frontend Frameworks (React, Vue)</li>
+      <li>Web Application Security</li>
+      <li>Performance Optimization</li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
