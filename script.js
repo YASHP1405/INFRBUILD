@@ -1,12 +1,13 @@
+// ================= THEME TOGGLE =================
 const toggle = document.getElementById("themeToggle");
 
 const setInitialTheme = () => {
   const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
   if (prefersLight) {
     document.body.classList.add("light");
-    toggle.innerHTML = "☀️";
+    if (toggle) toggle.innerHTML = "☀️";
   } else {
-    toggle.innerHTML = "🌙";
+    if (toggle) toggle.innerHTML = "🌙";
   }
 };
 
@@ -21,6 +22,51 @@ toggle?.addEventListener("click", () => {
 
 setInitialTheme();
 
+// ================= HAMBURGER MOBILE MENU =================
+const hamburger = document.getElementById("hamburger");
+const mainNav = document.getElementById("mainNav");
+
+// Create overlay element for mobile nav
+const navOverlay = document.createElement("div");
+navOverlay.className = "nav-overlay";
+document.body.appendChild(navOverlay);
+
+function toggleMobileNav() {
+  hamburger.classList.toggle("active");
+  mainNav.classList.toggle("open");
+  navOverlay.classList.toggle("active");
+  document.body.style.overflow = mainNav.classList.contains("open") ? "hidden" : "";
+}
+
+function closeMobileNav() {
+  hamburger.classList.remove("active");
+  mainNav.classList.remove("open");
+  navOverlay.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+if (hamburger) {
+  hamburger.addEventListener("click", toggleMobileNav);
+}
+
+// Close mobile nav when overlay is clicked
+navOverlay.addEventListener("click", closeMobileNav);
+
+// Close mobile nav when a link is clicked
+if (mainNav) {
+  mainNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMobileNav);
+  });
+}
+
+// Close mobile nav on window resize (if going back to desktop)
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    closeMobileNav();
+  }
+});
+
+// ================= CONTACT FORM =================
 const form = document.getElementById("contactForm");
 
 if (form) {
@@ -43,7 +89,7 @@ if (form) {
 
       if (response.ok) {
         form.reset();
-        successMsg.style.display = "block";
+        if (successMsg) successMsg.style.display = "block";
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -68,12 +114,14 @@ productCards.forEach(card => {
   });
 });
 
-modalOverlay.addEventListener("click", () => {
-  const activeModal = document.querySelector(".modal.active");
-  if (activeModal) {
-    closeModal(activeModal);
-  }
-});
+if (modalOverlay) {
+  modalOverlay.addEventListener("click", () => {
+    const activeModal = document.querySelector(".modal.active");
+    if (activeModal) {
+      closeModal(activeModal);
+    }
+  });
+}
 
 document.querySelectorAll(".close-btn").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -83,13 +131,13 @@ document.querySelectorAll(".close-btn").forEach(btn => {
 });
 
 function openModal(modal) {
-  if (!modal) return;
+  if (!modal || !modalOverlay) return;
   modal.classList.add("active");
   modalOverlay.classList.add("active");
 }
 
 function closeModal(modal) {
-  if (!modal) return;
+  if (!modal || !modalOverlay) return;
   modal.classList.remove("active");
   modalOverlay.classList.remove("active");
 }
@@ -111,9 +159,11 @@ const observer = new IntersectionObserver(
 reveals.forEach(el => observer.observe(el));
 
 // ================= TILT EFFECT =================
-VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-  max: 15,
-  speed: 400,
-  glare: true,
-  "max-glare": 0.5,
-});
+if (typeof VanillaTilt !== "undefined") {
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.5,
+  });
+}
